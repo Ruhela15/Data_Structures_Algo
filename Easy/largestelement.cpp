@@ -13,5 +13,5 @@ int main(){
     vector<int>arr = {5,4,3,2,1};
     int n = arr.size();
     int ans = large(arr,n);
-    cout<<"largest element is "<< ans<<" ";
+    cout<<"largest element is: "<< ans<<" ";
 }
