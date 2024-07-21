@@ -1,9 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main() {
-
   int n=3;
-  
   int prev2 = 1;
   int prev = 1;
   
