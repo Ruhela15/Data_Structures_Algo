@@ -1,4 +1,6 @@
-#include<bits/stdc++.h>
+#include<iostream>
+#include<queue>
+#include<stack>
 using namespace std;
 bool valid (string s){
   stack<int>st;
@@ -8,7 +10,7 @@ bool valid (string s){
         if(st.size()==0) return false;
         char ch = st.top();
         st.pop();
-        if((it==')' and ch=='(') or (it==']' and ch=='[' )or(it=='}' and ch=='{'))continue;
+        if((it==')' && ch=='(') || (it==']' && ch=='[' )||(it=='}'&& ch=='{'))continue;
         else return false;
     }
   }return st.empty();

@@ -1,5 +1,6 @@
-#include<bits/stdc++.h>
-
+#include<iostream>
+#include<queue>
+#include<stack>
 using namespace std;
 class Stack {
   int size;
@@ -33,7 +34,7 @@ int main() {
   s.push(6);
   s.push(3);
   s.push(7);
-  cout << "Top of stack is before deleting any element " << s.Top() << endl;
+  cout << "Top of stack is before deleting any element " << s.Top() <<endl;
   cout << "Size of stack before deleting any element " << s.Size() << endl;
   cout << "The element deleted is " << s.pop() << endl;
   cout << "Size of stack after deleting an element " << s.Size() << endl;
