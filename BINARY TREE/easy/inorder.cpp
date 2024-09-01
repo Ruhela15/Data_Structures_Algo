@@ -14,8 +14,8 @@
     return ;
   }
   inorder(root->left,arr);
-  arr.push_back(root->data);
-  inorder(root->right,arr);
+  arr.push_back(root->data);.
+  inorder(root->right,arr);-
  }
  vector<int>Inorder(Node*root){
     vector<int>arr;
