@@ -9,32 +9,32 @@ public:
     void solve(int ind, int target, vector<vector<int>>& ans, vector<int>& arr, vector<int>& ds) {
         if (target == 0) {
             ans.push_back(ds);
-            return; // End recursion when target is reached
+            return; 
         }
 
         for (int i = ind; i < arr.size(); i++) {
-            if (i > ind && arr[i] == arr[i - 1]) continue; // Skip duplicates
-            if (arr[i] > target) break; // No need to continue if current number exceeds target
+            if (i > ind && arr[i] == arr[i - 1]) continue; 
+            if (arr[i] > target) break; 
 
             ds.push_back(arr[i]);
-            solve(i + 1, target - arr[i], ans, arr, ds); // Move to next index
-            ds.pop_back(); // Backtrack
+            solve(i + 1, target - arr[i], ans, arr, ds); 
+            ds.pop_back(); 
         }
     }
 
     vector<vector<int>> combinationSum2(vector<int>& candidates, int target) {
-        sort(candidates.begin(), candidates.end()); // Sort to handle duplicates
+        sort(candidates.begin(), candidates.end()); 
         vector<vector<int>> ans;
         vector<int> ds;
         solve(0, target, ans, candidates, ds);
-        return ans; // Return the result vector
+        return ans; 
     }
 };
 
 int main() {
     Solution sol;
-    vector<int> candidates = {10, 1, 2, 7, 6, 1, 5}; // Example candidates
-    int target = 8; // Example target
+    vector<int> candidates = {10, 1, 2, 7, 6, 1, 5}; 
+    int target = 8; 
 
     vector<vector<int>> result = sol.combinationSum2(candidates, target);
 
